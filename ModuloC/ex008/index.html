@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Bhaskara</title>
+    <style>
+        * {
+            font-family: arial;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(194, 194, 194);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        input  {
+            margin-bottom: 5px;
+            background-color: lightgreen;
+            border: none;
+            font-size: 20px;
+            color: black;
+            padding: 5px 3px;
+        }
+
+        .calculadora {
+            display: inline-block;
+            background-color: darkred;
+            width: 390px;
+            padding: 20px;
+            align-content: center;
+
+        }
+
+        p {
+            color: black;
+            font-size: 28px;
+        }
+
+        input#button {
+            margin-top: 20px;
+            padding: 15px 35px;
+            border-radius: 8px;
+            background-color: black;
+            cursor: pointer;
+            color: white;
+        }
+
+        div#res {
+            width: 390px;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            height: 5vh;
+            
+        }
+
+        div#res p {
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calculadora de Bhaskara</h1>
+        <input type="number" name="num1" id="num-a"> <label for="num-a">a</label> <br>
+        <input type="number" name="num2" id="num-b"> <label for="num-b">b</label> <br>
+        <input type="number" name="num3" id="num-c"> <label for="num-a">c</label> <br>
+        <input type="button" value="Calcular" onclick="calc()" id="button">
+    </div>
+    <div id="res">
+        <p>Resultado:</p>
+    </div>
+
+    <script>
+
+        function calc() {
+
+            var txta = document.getElementById('num-a')
+            var txtb = document.getElementById('num-b')
+            var txtc = document.getElementById('num-c')
+            var na = Number(txta.value)
+            var nb = Number(txtb.value)
+            var nc = Number(txtc.value)
+            var s = nb**2 - 4*na*nc
+            res.innerHTML = `Resultado ${s}`
+
+
+            
+        }
+
+
+    </script>
+</body>
+</html>
