@@ -4,110 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Bhaskara</title>
-    <style>
-        * {
-            font-family: arial;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: rgb(194, 194, 194);
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        input  {
-            margin-bottom: 5px;
-            background-color: white;
-            border-radius: 8px;
-            border: none;
-            font-size: 20px;
-            color: black;
-            padding: 5px 3px;
-        }
-
-        .calculadora {
-            display: inline-block;
-            background-color: darkred;
-            width: 390px;
-            padding: 20px;
-            align-content: center;
-
-        }
-
-        p {
-            color: black;
-            font-size: 28px;
-        }
-
-        input#button {
-            margin-top: 20px;
-            padding: 15px 35px;
-            border-radius: 8px;
-            background-color: black;
-            cursor: pointer;
-            color: white;
-        }
-
-        div#res {
-            width: 390px;
-            padding: 20px;
-            background-color: black;
-            color: white;
-            font-size: 18px;
-            height: 30vh;
-            
-            
-        }
-
-        div#res p {
-            color: white;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculadora">
-        <h1>Calculadora de Bhaskara</h1>
-        <input type="number" name="num1" id="num-a"> <label for="num-a">a</label> <br>
-        <input type="number" name="num2" id="num-b"> <label for="num-b">b</label> <br>
-        <input type="number" name="num3" id="num-c"> <label for="num-a">c</label> <br>
-        <input type="button" value="Calcular" onclick="calc()" id="button">
+    <div class="container">
+        <div class="calculadora">
+            <h1>Calculadora de Bhaskara</h1>
+            <input type="number" name="num1" id="num-a"> <label for="num-a">a</label> <br>
+            <input type="number" name="num2" id="num-b"> <label for="num-b">b</label> <br>
+            <input type="number" name="num3" id="num-c"> <label for="num-a">c</label> <br>
+            <input type="button" value="Calcular" onclick="calc()" id="button">
+        </div>
+        <div id="res">
+            <p>Resultado:</p> 
+        </div>
     </div>
-    <div id="res">
-        <p>Resultado:</p> 
-    </div>
 
-    <script>
-
-        function calc() {
-            var txta = document.getElementById('num-a')
-            var txtb = document.getElementById('num-b')
-            var txtc = document.getElementById('num-c')
-            var na = Number(txta.value)
-            var nb = Number(txtb.value)
-            var nc = Number(txtc.value)
-            var c1 = nb**2
-            var c2 = - 4*na*nc
-            var r1 = c1 + c2
-            res.innerHTML = `
-            Resultado: <br> <br>
-            B² - 4.a.c <br>  <br>
-            ${nb}² - 4.${na}.${nc} <br> <br>
-            ${c1} - 4.${na}.${nc} <br> <br>
-            ${c1} + ${c2} <br> <br>
-            ${r1} <br> <br>
-
-            Delta = ${r1}
-            `             
-        }
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
