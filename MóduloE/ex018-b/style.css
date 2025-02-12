@@ -22,10 +22,6 @@ section {
 }
 
 footer {
-    font-style: italic;
-}
 
-div#calculo > input {
-    display: block;
-    margin-bottom: 10px;
+    font-style: italic;
 }
